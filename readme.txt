@@ -25,3 +25,14 @@ using a loop, and then frees the old buffer using free.
  This program opens the file specified as a command-line argument using open,
  then uses get_next_line to read and print each line of the file until the 
  end of the file is reached. It then closes the file using close.
+ 
+ Surfi89-
+new line görene kadar BUFFER_SIZE kadar okuyup bi stringe ekliyor, 
+new line gördüğünde eklemeyi bırakıyor. Sonra elde ettiği stringin newline den sonrasını siliyor.
+
+Yaten-
+Yine aynı mantık buffersize arttıra arttıra okumuş, bufferi string array olarak tanımlayıp fd. stringe yazmış büyük ihtimal stdo için
+nihai stringin içinde sadece bir \0 var strjoin ile okuduğu stringin son elemanını da /0 yapttıktan sonra onunla nihai stringi birleştiriyor.
+ve gereksiz stringleri free ile yok ediyor ve tekrar içinde \n var mı kontrol ediyor
+
+\n den öncesini almak için de substr kullanılmış
