@@ -1,5 +1,6 @@
 #include <fcntl.h>
 #include <stdio.h>
+#include "get_next_line.h"
 
 int main(int argc, char** argv) {
   if (argc != 2) {
@@ -17,7 +18,7 @@ int main(int argc, char** argv) {
   // Read and print each line of the file
   char* line;
   while ((line = get_next_line(fd)) != NULL) {
-    printf("%s\n", line);
+    printf("%s", line);
     free(line);
   }
 
@@ -29,4 +30,3 @@ int main(int argc, char** argv) {
 
   return 0;
 }
-
