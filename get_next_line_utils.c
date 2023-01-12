@@ -6,7 +6,7 @@
 /*   By: isaridas <isaridas@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:41:46 by isaridas          #+#    #+#             */
-/*   Updated: 2023/01/10 15:41:48 by isaridas         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:03:26 by isaridas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ char	*ft_strjoin(char *s1, char const *s2)
 		j++;
 	}
 	ptr[i] = 0;
+	free(s1);
 	return (ptr);
 }
 
